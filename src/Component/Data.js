@@ -16,7 +16,7 @@ const Data = () => {
       try {
           const response = await axios('https://api.github.com/users');
           // setLoading(false);
-
+                setUsers(response.data);
             if(selectdata==='name')
             {
               const result=response.data.sort((a,b)=>a.login.localeCompare(b.login));
